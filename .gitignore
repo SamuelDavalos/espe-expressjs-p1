@@ -147,3 +147,7 @@ dist/
 /generated/prisma
 
 .DS_Store
+
+/postman/EVAL_P1_Davalos.postman_environment.json
+/postman/EVAL_P1.local.postman_environment.json
+/Informe_Evaluacion_P1_API_reservas.docx

@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: espe-expressjs-api
+    runtime: node
+    plan: free
+    buildCommand: npm ci --include=dev && npx prisma generate
+    startCommand: npx prisma migrate deploy && npm run seed:render && npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: espe-expressjs-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_EMAIL
+        value: paulo.galarza@example.com
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: STUDENT_NAME
+        sync: false
+      - key: STUDENT_EMAIL
+        sync: false
+      - key: STUDENT_PASSWORD
+        sync: false
+
+databases:
+  - name: espe-expressjs-db
+    plan: free
+    region: oregon
+    databaseName: espe_db
+    user: espe_user
+    postgresMajorVersion: "17"

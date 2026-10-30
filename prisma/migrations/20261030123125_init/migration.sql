@@ -1,3 +1,22 @@
+/*
+  Warnings:
+
+  - You are about to drop the `Appointment` table. If the table is not empty, all the data it contains will be lost.
+  - You are about to drop the `TimeBlock` table. If the table is not empty, all the data it contains will be lost.
+
+*/
+-- DropForeignKey
+ALTER TABLE "Appointment" DROP CONSTRAINT "Appointment_timeBlockId_fkey";
+
+-- DropForeignKey
+ALTER TABLE "Appointment" DROP CONSTRAINT "Appointment_userId_fkey";
+
+-- DropTable
+DROP TABLE "Appointment";
+
+-- DropTable
+DROP TABLE "TimeBlock";
+
 -- CreateTable
 CREATE TABLE "Schedule" (
     "id" SERIAL NOT NULL,
