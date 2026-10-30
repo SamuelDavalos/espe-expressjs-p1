@@ -20,7 +20,7 @@
           "mode": "raw",
           "raw": "{\n  \"email\": \"{{adminEmail}}\",\n  \"password\": \"{{adminPassword}}\"\n}"
         },
-        "url": "{{baseUrl}}/api/auth/login"
+        "url": "http://localhost:3099/api/auth/login"
       },
       "event": [
         {
@@ -52,7 +52,7 @@
           "mode": "raw",
           "raw": "{\n  \"email\": \"{{studentEmail}}\",\n  \"password\": \"{{studentPassword}}\"\n}"
         },
-        "url": "{{baseUrl}}/api/auth/login"
+        "url": "http://localhost:3099/api/auth/login"
       },
       "event": [
         {
@@ -89,7 +89,7 @@
           "mode": "raw",
           "raw": "{\n  \"court\": \"Pádel 3\",\n  \"startTime\": \"2026-11-24T08:00:00.000Z\",\n  \"endTime\": \"2026-11-24T10:00:00.000Z\"\n}"
         },
-        "url": "{{baseUrl}}/api/admin/schedules"
+        "url": "http://localhost:3099/api/admin/schedules"
       },
       "event": [
         {
@@ -122,7 +122,7 @@
           "mode": "raw",
           "raw": "{\n  \"court\": \"Pádel 3\",\n  \"startTime\": \"2026-11-25T08:00:00.000Z\",\n  \"endTime\": \"2026-11-25T10:00:00.000Z\"\n}"
         },
-        "url": "{{baseUrl}}/api/admin/schedules"
+        "url": "http://localhost:3099/api/admin/schedules"
       },
       "event": [
         {
@@ -150,7 +150,7 @@
           "mode": "raw",
           "raw": "{\n  \"court\": \"Pádel 3\",\n  \"startTime\": \"2026-11-25T08:00:00.000Z\",\n  \"endTime\": \"2026-11-25T10:00:00.000Z\"\n}"
         },
-        "url": "{{baseUrl}}/api/admin/schedules"
+        "url": "http://localhost:3099/api/admin/schedules"
       },
       "event": [
         {
@@ -178,7 +178,7 @@
             "value": "application/json"
           }
         ],
-        "url": "{{baseUrl}}/api/admin/schedules",
+        "url": "http://localhost:3099/api/admin/schedules",
         "body": {
           "mode": "raw",
           "raw": "{\n  \"court\": \"\",\n  \"startTime\": \"fecha-inválida\",\n  \"endTime\": \"fecha-inválida\"\n}",
@@ -211,7 +211,7 @@
             "value": "Bearer {{adminToken}}"
           }
         ],
-        "url": "{{baseUrl}}/api/admin/bookings"
+        "url": "http://localhost:3099/api/admin/bookings"
       },
       "event": [
         {
@@ -238,7 +238,7 @@
             "value": "Bearer {{userToken}}"
           }
         ],
-        "url": "{{baseUrl}}/api/admin/bookings"
+        "url": "http://localhost:3099/api/admin/bookings"
       },
       "event": [
         {
@@ -256,7 +256,7 @@
       "name": "09 Admin - GET reservas ADMIN sin token",
       "request": {
         "method": "GET",
-        "url": "{{baseUrl}}/api/admin/bookings"
+        "url": "http://localhost:3099/api/admin/bookings"
       },
       "event": [
         {
@@ -288,7 +288,7 @@
           "mode": "raw",
           "raw": "{\n  \"date\": \"2026-11-24T08:00:00.000Z\",\n  \"scheduleId\": {{testScheduleId}}\n}"
         },
-        "url": "{{baseUrl}}/api/bookings"
+        "url": "http://localhost:3099/api/bookings"
       },
       "event": [
         {
@@ -324,7 +324,7 @@
           "mode": "raw",
           "raw": "{\n  \"date\": \"2026-11-24T08:00:00.000Z\",\n  \"scheduleId\": {{testScheduleId}}\n}"
         },
-        "url": "{{baseUrl}}/api/bookings"
+        "url": "http://localhost:3099/api/bookings"
       },
       "event": [
         {
@@ -353,7 +353,7 @@
           "mode": "raw",
           "raw": "{\n  \"date\": \"2026-11-24T08:00:00.000Z\",\n  \"scheduleId\": {{testScheduleId}}\n}"
         },
-        "url": "{{baseUrl}}/api/bookings"
+        "url": "http://localhost:3099/api/bookings"
       },
       "event": [
         {
@@ -381,7 +381,7 @@
             "value": "application/json"
           }
         ],
-        "url": "{{baseUrl}}/api/bookings",
+        "url": "http://localhost:3099/api/bookings",
         "body": {
           "mode": "raw",
           "raw": "{\n  \"date\": \"no-es-fecha\",\n  \"scheduleId\": {{testScheduleId}}\n}",
@@ -414,7 +414,7 @@
             "value": "Bearer {{userToken}}"
           }
         ],
-        "url": "{{baseUrl}}/api/bookings/{{bookingId}}"
+        "url": "http://localhost:3099/api/bookings/{{bookingId}}"
       },
       "event": [
         {
@@ -438,7 +438,7 @@
             "value": "Bearer {{adminToken}}"
           }
         ],
-        "url": "{{baseUrl}}/api/bookings/{{bookingId}}"
+        "url": "http://localhost:3099/api/bookings/{{bookingId}}"
       },
       "event": [
         {
@@ -462,7 +462,7 @@
             "value": "Bearer {{userToken}}"
           }
         ],
-        "url": "{{baseUrl}}/api/bookings/999999"
+        "url": "http://localhost:3099/api/bookings/999999"
       },
       "event": [
         {
@@ -486,7 +486,7 @@
             "value": "Bearer {{userToken}}"
           }
         ],
-        "url": "{{baseUrl}}/api/bookings/{{adminBookingId}}"
+        "url": "http://localhost:3099/api/bookings/{{adminBookingId}}"
       },
       "event": [
         {
@@ -505,7 +505,7 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": "{{baseUrl}}/api/bookings/{{bookingId}}"
+        "url": "http://localhost:3099/api/bookings/{{bookingId}}"
       },
       "event": [
         {
@@ -537,7 +537,7 @@
           "mode": "raw",
           "raw": "{\n  \"date\": \"2026-11-24T09:00:00.000Z\",\n  \"scheduleId\": {{testScheduleId}}\n}"
         },
-        "url": "{{baseUrl}}/api/bookings/{{bookingId}}"
+        "url": "http://localhost:3099/api/bookings/{{bookingId}}"
       },
       "event": [
         {
@@ -565,7 +565,7 @@
             "value": "application/json"
           }
         ],
-        "url": "{{baseUrl}}/api/bookings/{{bookingId}}",
+        "url": "http://localhost:3099/api/bookings/{{bookingId}}",
         "body": {
           "mode": "raw",
           "raw": "{\n  \"date\": \"2026-11-24T10:00:00.000Z\",\n  \"scheduleId\": {{testScheduleId}}\n}",
@@ -606,7 +606,7 @@
           "mode": "raw",
           "raw": "{\n  \"date\": \"{{adminBookingDate}}\",\n  \"scheduleId\": {{adminScheduleId}}\n}"
         },
-        "url": "{{baseUrl}}/api/bookings/{{bookingId}}"
+        "url": "http://localhost:3099/api/bookings/{{bookingId}}"
       },
       "event": [
         {
@@ -634,7 +634,7 @@
             "value": "application/json"
           }
         ],
-        "url": "{{baseUrl}}/api/bookings/{{adminBookingId}}",
+        "url": "http://localhost:3099/api/bookings/{{adminBookingId}}",
         "body": {
           "mode": "raw",
           "raw": "{\n  \"date\": \"2026-11-24T09:00:00.000Z\",\n  \"scheduleId\": {{testScheduleId}}\n}",
@@ -671,7 +671,7 @@
             "value": "application/json"
           }
         ],
-        "url": "{{baseUrl}}/api/bookings/999999",
+        "url": "http://localhost:3099/api/bookings/999999",
         "body": {
           "mode": "raw",
           "raw": "{\n  \"date\": \"2026-11-24T09:00:00.000Z\",\n  \"scheduleId\": {{testScheduleId}}\n}",
@@ -704,7 +704,7 @@
             "value": "application/json"
           }
         ],
-        "url": "{{baseUrl}}/api/bookings/{{bookingId}}",
+        "url": "http://localhost:3099/api/bookings/{{bookingId}}",
         "body": {
           "mode": "raw",
           "raw": "{\n  \"date\": \"2026-11-24T09:00:00.000Z\",\n  \"scheduleId\": {{testScheduleId}}\n}",
@@ -737,7 +737,7 @@
             "value": "Bearer {{userToken}}"
           }
         ],
-        "url": "{{baseUrl}}/api/bookings/{{adminBookingId}}"
+        "url": "http://localhost:3099/api/bookings/{{adminBookingId}}"
       },
       "event": [
         {
@@ -761,7 +761,7 @@
             "value": "Bearer {{userToken}}"
           }
         ],
-        "url": "{{baseUrl}}/api/bookings/999999"
+        "url": "http://localhost:3099/api/bookings/999999"
       },
       "event": [
         {
@@ -780,7 +780,7 @@
       "request": {
         "method": "DELETE",
         "header": [],
-        "url": "{{baseUrl}}/api/bookings/{{bookingId}}"
+        "url": "http://localhost:3099/api/bookings/{{bookingId}}"
       },
       "event": [
         {
@@ -804,7 +804,7 @@
             "value": "Bearer {{userToken}}"
           }
         ],
-        "url": "{{baseUrl}}/api/bookings/{{bookingId}}"
+        "url": "http://localhost:3099/api/bookings/{{bookingId}}"
       },
       "event": [
         {
@@ -828,7 +828,7 @@
             "value": "Bearer {{userToken}}"
           }
         ],
-        "url": "{{baseUrl}}/api/users/{{studentId}}/bookings"
+        "url": "http://localhost:3099/api/users/{{studentId}}/bookings"
       },
       "event": [
         {
@@ -853,7 +853,7 @@
             "value": "Bearer {{adminToken}}"
           }
         ],
-        "url": "{{baseUrl}}/api/users/{{studentId}}/bookings"
+        "url": "http://localhost:3099/api/users/{{studentId}}/bookings"
       },
       "event": [
         {
@@ -878,7 +878,7 @@
             "value": "Bearer {{userToken}}"
           }
         ],
-        "url": "{{baseUrl}}/api/users/{{adminId}}/bookings"
+        "url": "http://localhost:3099/api/users/{{adminId}}/bookings"
       },
       "event": [
         {
@@ -897,7 +897,7 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": "{{baseUrl}}/api/users/{{studentId}}/bookings"
+        "url": "http://localhost:3099/api/users/{{studentId}}/bookings"
       },
       "event": [
         {
