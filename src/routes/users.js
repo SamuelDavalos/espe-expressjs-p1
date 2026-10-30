@@ -1,14 +1,14 @@
 const { Router } = require("express");
-const appointmentController = require("../controllers/appointmentController");
+const userController = require("../controllers/userController");
 const authenticateToken = require("../middlewares/auth");
 const authorizeUser = require("../middlewares/authorizeUser");
-const router = Router();
 
+const router = Router();
 router.get(
-  "/:id/appointments",
+  "/:id/bookings",
   authenticateToken,
   authorizeUser,
-  appointmentController.getUserAppointments,
+  userController.getUserBookings,
 );
 
 module.exports = router;

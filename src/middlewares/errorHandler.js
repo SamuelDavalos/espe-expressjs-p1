@@ -4,7 +4,7 @@ const errorHandler = (err, req, res, next) => {
   console.log(
     `[ERROR] ${new Date().toISOString()} - ${statusCode} - ${message}`,
   );
-  if (err.stack) {
+  if (process.env.NODE_ENV === "development" && err.stack) {
     console.error(err.stack);
   }
 

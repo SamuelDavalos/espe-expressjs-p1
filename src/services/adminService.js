@@ -3,25 +3,27 @@ const { PrismaPg } = require("@prisma/adapter-pg");
 
 const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL });
 const prisma = new PrismaClient({ adapter });
+const userSummary = { id: true, name: true, email: true, role: true };
 
-const createTimeBlocksService = async (startTime, endTime) => {
-  const newTimeBlock = await prisma.timeBlock.create({
+const createScheduleService = async (court, startTime, endTime) => {
+  const schedule = await prisma.schedule.create({
     data: {
+      court,
       startTime: new Date(startTime),
       endTime: new Date(endTime),
     },
   });
-  return newTimeBlock;
+  return schedule;
 };
 
-const listReservationsService = async () => {
-  const reservations = await prisma.appointment.findMany({
+const listBookingsService = async () => {
+  const bookings = await prisma.booking.findMany({
     include: {
-      user: true,
-      timeBlock: true,
+      user: { select: userSummary },
+      schedule: true,
     },
   });
-  return reservations;
+  return bookings;
 };
 
-module.exports = { createTimeBlocksService, listReservationsService };
+module.exports = { createScheduleService, listBookingsService };
